@@ -20,7 +20,7 @@ def contactform(request):
 # Renders the 'Home' page
 def home(request):
     contactform(request)
-    return render(request, 'homepage\index.html')
+    return render(request, 'homepage/index.html')
 
 # Renders the 'For Sale' page
 def alllistings(request):
