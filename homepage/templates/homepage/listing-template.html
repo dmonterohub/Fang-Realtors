@@ -1,0 +1,159 @@
+{% load static %}
+
+<body>
+    <!-- Hero Section-->
+
+    <section id="hero" class="homehero"
+        style="background: linear-gradient( to right, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.4) ), url('../../static/img/{{ property_listing.title }}.png'); background-size:cover; background-repeat: no-repeat;">
+        <div class="container">
+            <!-- Navigation -->
+            {% include "homepage\header.html" %}
+            <!-- Navigation End -->
+            <!-- Hero Box [Listing Title]-->
+            <div class="hero-box">
+                <h1 class="hero-heading">{{ property_listing.title }}</h1>
+                <p class="hero-desc" style="align-text:center!important; margin-bottom:100px; font-size:16pt;">
+                    ${{ property_listing.price|floatformat:"g" }}
+                </p>
+
+                <!-- b-->
+                <div class="btn-box">
+                    <a href="#" class="cta-btn try">Schedule A Showing</a>
+
+                </div>
+                <span style="margin:100px 0px;display:block; height:10px;"></span>
+                <!-- btn End-->
+            </div>
+            <!-- Hero Box End-->
+        </div>
+    </section>
+    <!-- Luxury Living Section-->
+    <section id="row1">
+        <div class="row" style="position:relative;">
+            <!-- Col1 -->
+            <div class="column" id="textcolright" style="width:74%">
+                <h3 class="upper">{{ property_listing.status }}</h3>
+                <h2 class="upper" style="margin-bottom:0px"> {{ property_listing.title }}</h2>
+                <h2 class="upper" style="font-size:20pt;">
+                    {{ property_listing.title }}</h3>
+                    <hr>
+                    <h2 class="upper" style="color:white; margin-bottom:50px;font-size:16pt;">
+                        ${{ property_listing.price|floatformat:"g" }}</h3>
+                        <p>
+                            {{ property_listing.description }}
+                        </p>
+                        <div class="btn-box">
+                            <a href="#" class="cta-btn try">Contact Us Today</a>
+
+                        </div>
+            </div>
+            <span class="header-menu__line" style="
+                width: 1px;
+                margin-top: -120px;
+                height: 120%;
+                pointer-events: none;
+                background-color: hsla(0,0%,100%,.25);
+                /* float:left; */
+                /* width: 2px; */
+                display: inline;
+                position: absolute;
+            "></span>
+            <!-- Col2 -->
+            <div class="column" id="centered" style="width:24%; ; display:inline !important; ">
+                <p style="align-items:center; display:flex; margin-left:42%;margin-bottom:40px;font-size:12pt;"><img
+                        class="card-icon" style="width:50px;margin-right:10px" src="{% static 'img/bed.png' %}"
+                        alt="Fang Realtors Logo" />{{ property_listing.beds }}<br>Bed</p>
+                <p style="align-items:center; display:flex; margin-left:42%;margin-bottom:40px;font-size:12pt;"><img
+                        class="card-icon" style="width:50px;margin-right:10px" src="{% static 'img/bathtub.png' %}"
+                        alt="Fang Realtors Logo" />{{ property_listing.baths }}<br>bath</p>
+                <p style="align-items:center; display:flex; margin-left:42%;margin-bottom:40px;font-size:12pt;"><img
+                        class="card-icon" style="width:50px;margin-right:10px" src="{% static 'img/area.png' %}"
+                        alt="Fang Realtors Logo" />{{ property_listing.homesize|floatformat:"g" }}<br>Sq. Ft.<br>Living
+                    Size</p>
+                <p style="align-items:center; display:flex; margin-left:40%;margin-bottom:40px;font-size:12pt;"><img
+                        class="card-icon" style="width:55px;margin-right:10px" src="{% static 'img/size.png' %}"
+                        alt="Fang Realtors Logo" />{{ property_listing.lotsize|floatformat:"g" }}<br>Sq. Ft.<br>Lot Size
+                </p>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- CTA Contact -->
+    <section id="cta">
+        <div class="row">
+            <!-- Col1 -->
+            <div class="column" id="textcolright">
+                <h3>Speak To An Agent Today</h3>
+                <h2>CONTACT US</h2>
+
+                <div class="btn-box">
+                    <a href="{% url 'homepage-contacts' %}" class="cta-btn try">Contact Us Today</a>
+
+                </div>
+            </div>
+
+            <!-- Col2 -->
+            <div class="column" id="centered">
+                <div class='form-cntnr'>
+                    <form method="post" action="https://www.randyconnolly.com/tests/process.php">
+                        <fieldset>
+                            <legend>
+                                Let's Talk<span class='centered'>
+                                    <hr class='gradient'>
+                                </span>
+                            </legend>
+                            <table>
+                                <tr>
+                                    <td><input type="text" name="first name" placeholder="First Name" /></td>
+                                    <td><input type="text" name="last name" placeholder="Last Name" /></td>
+                                </tr>
+                                <tr>
+                                    <td><input type="text" name="email" placeholder="Email" /></td>
+                                    <td><input type="text" name="phone" placeholder="Phone" /></td>
+                                </tr>
+                                <tr>
+                                    <td colspan="2">
+                                        <br><textarea rows="3" name="description"
+                                            placeholder="Type your message here"></textarea>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td colspan="2" class="banner">
+                                        <span class='centered'>
+                                            <input type="submit" value="Submit" class='cta-btn' /><input type="reset"
+                                                value="Clear Form" class='cta-btn' />
+                                        </span>
+                                    </td>
+                                </tr>
+                            </table>
+                        </fieldset>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Site footer -->
+    <section>
+
+        <footer>
+            <div class="footer">
+
+                <div class="footrow">
+                    <ul>
+                        <li><a href="{% url 'homepage-contacts' %}">Contact Us</a></li>
+                        <li><a href="{% url 'homepage-home' %}">Home</a></li>
+                        <li><a href="{% url 'homepage-featuredlistings' %}">Featured Listings</a></li>
+                        <li><a href="{% url 'homepage-alllistings' %}">All Listings</a></li>
+                        <li><a href="{% url 'homepage-searchlistings' %}">Search Listings</a></li>
+                    </ul>
+                </div>
+
+                <div class="footrow">
+                    Fang Realty Copyright © 2024 Realty - All rights reserved
+                </div>
+            </div>
+        </footer>
+    </section>
+</body>

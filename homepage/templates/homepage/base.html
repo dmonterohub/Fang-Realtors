@@ -1,0 +1,118 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Fang Realtor Group</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="icon" href="{% static 'img/Icon_Logo.png' %}">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montseratt" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.typekit.net/wog6htp.css">
+</head>
+<!-- Navigation -->
+<div class="navbar">
+    <div class="logo">
+        <a href="{% url 'homepage-home' %}">
+            <img class="logo-img" src="{% static 'img/OnTop White_Logo.png' %}"
+                 alt="Fang Realtors Logo" />
+        </a>
+    </div>
+    <div class="menu">
+        <span class="header-menu__line-top"></span>
+        <a href="{% url 'homepage-home' %}">Home</a>
+        <span class="header-menu__line"></span>
+        <a href="{% url 'homepage-alllistings' %}">For Sale</a>
+        <span class="header-menu__line"></span>
+        <a href="{% url 'homepage-featuredlistings' %}">Featured Listings</a>
+        <span class="header-menu__line"></span>
+        <a href="{% url 'homepage-searchlistings' %}">Search Homes</a>
+        <span class="header-menu__line"></span>
+        <a class="btn-signup" href="{% url 'homepage-contacts' %}">Contact</a>
+    </div>
+</div>
+
+{% block content %} {% endblock %}
+
+<!-- CTA Contact -->
+<section id="cta">
+    <div class="row">
+        <!-- Col1 -->
+        <div class="column" id="textcolright">
+            <h3>Speak To An Agent Today</h3>
+            <h2>CONTACT US</h2>
+
+            <div class="btn-box">
+                <a href="{% url 'homepage-contacts' %}" class="cta-btn try">Contact Us Today</a>
+
+            </div>
+        </div>
+
+        <!-- Col2 -->
+        <div class="column" id="centered">
+            <div class='form-cntnr'>
+                <form method="post" action="{% url 'homepage-contacts' %}">
+                    {% csrf_token %}
+                    <fieldset>
+                        <legend>
+                            Let's Talk<span class='centered'>
+                                <hr class='gradient'>
+                            </span>
+                        </legend>
+                        <table>
+                            <tr>
+                                <td><input type="text" name="first name" placeholder="First Name" /></td>
+                                <td><input type="text" name="last name" placeholder="Last Name" /></td>
+                            </tr>
+                            <tr>
+                                <td><input type="text" name="email" placeholder="Email" /></td>
+                                <td><input type="text" name="phone" placeholder="Phone" /></td>
+                            </tr>
+                            <tr>
+                                <td colspan="2">
+                                    <br><textarea rows="3" name="description"
+                                                  placeholder="Type your message here"></textarea>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="2" class="banner">
+                                    <span class='centered'>
+                                        <input type="submit" value="Submit" class='cta-btn' /><input type="reset" value="Clear Form" class='cta-btn' />
+                                    </span>
+                                </td>
+                            </tr>
+                        </table>
+                    </fieldset>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Site footer -->
+<section>
+
+    <footer>
+        <div class="footer">
+
+            <div class="footrow">
+                <ul>
+                    <li><a href="{% url 'homepage-home' %}">Home</a></li>
+                    <li><a href="{% url 'homepage-alllistings' %}">All Listings</a></li>
+                    <li><a href="{% url 'homepage-featuredlistings' %}">Featured Listings</a></li>
+                    <li><a href="{% url 'homepage-searchlistings' %}">Search Listings</a></li>
+                    <li><a href="{% url 'homepage-contacts' %}">Contact Us</a></li>
+                </ul>
+            </div>
+
+            <div class="footrow">
+                Fang Realty Copyright © 2024 Realty - All rights reserved
+            </div>
+        </div>
+    </footer>
+</section>
+
+</html>

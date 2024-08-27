@@ -1,0 +1,38 @@
+drfang
+12345678
+
+def listings(request):
+    listings = Listings.objects.all()
+    flistings = Listings.objects.filter(featuredlistings__isnull=False)
+    return render(request, 'homepage\listings.html', {'listings': listings, 'flistings': flistings})
+
+# # Renders the Contact page AND handles Form requests
+# def contactform(request):
+#         if request.method == 'POST':
+#             # Extract data from the POST request
+#             firstname = request.POST['first name']
+#             lastname = request.POST['last name']
+#             email = request.POST['email']
+#             phone = request.POST['phone']
+#             message = request.POST['description']
+
+#             # Create a new Contact object and save it to the database
+#             newcontact = Contact(firstname=firstname, lastname=lastname, email=email, phone=phone, message=message)
+#             newcontact.save()
+
+#             # Redirect to another page or render success message
+#             return redirect('homepage-contacts')
+#         # If the request method is not POST, render the contact form page (or handle accordingly)
+#         return render(request, 'homepage\Contact.html')
+
+def register(request):
+    if request.method == 'POST':
+        form = UserCreationForm(request.POST)
+        if form.is_valid():
+            form.save()
+            username = form.cleaned_data.get('username')
+            messages.success(request, f'Account created for {username}!')
+            return redirect('users-register')
+    else:
+        form = UserCreationForm()
+    return render(request, 'users/register.html', {'form': form} )

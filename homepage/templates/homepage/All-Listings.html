@@ -1,0 +1,40 @@
+<body>
+    <!-- Hero Section-->
+    <section id="hero" class="listingshero">
+        <div class="container">
+            <!-- Navigation -->
+            {% extends "homepage\base.html" %}
+            {% load static %}
+
+            {% block content %}
+            <!-- Navigation End -->
+            <!-- Hero Box -->
+            <div class="hero-box">
+                <h1 class="hero-heading">WHEN A HOUSE BECOMES YOUR HOME</h1>
+                <p class="hero-desc">
+                    Meant morrow mortals longer within never said by mortals faster engaged as floating radiant sir came
+                    into have more entreating tapping whose wished to i back turning and and nothing
+                </p>
+                <!-- b-->
+                <div class="btn-box">
+                    <a href="#" class="cta-btn try">Schedule A Showing</a>
+
+                </div>
+                <span style="margin:100px 0px;display:block; height:10px;"></span>
+                <!-- btn End-->
+            </div>
+            <!-- Hero Box End-->
+        </div>
+    </section>
+
+    <!-- Featured Listings Section -->
+    <section id="featuredlistings">
+        <div>
+            <h3 style="text-align:center">Our Properties</h3>
+            <h2 style="text-align:center">ALL LISTINGS</h2>
+        </div>
+        {% include "homepage\idxalllistings.html" %}
+    </section>
+    {% endblock %}
+
+</body>

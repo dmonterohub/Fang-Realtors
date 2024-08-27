@@ -1,0 +1,36 @@
+{% load static %}
+<section id="idxlistings">
+    <div class="responsive-three-columns">
+
+        {% for listing in listings %}
+
+        <div class="three-col-column">
+            <div class="property-card">
+                <img src="../static/img/{{listing.title}}.png" class="image">
+                <div class='tag'>
+                    <h2>${{ listing.price|floatformat:"g" }}</h2>
+                </div>
+                <div class="overlay">
+                    <div class="card-content">
+                        <h1 class='property-name'>{{ listing.title }}</h1>
+                        <h1 class='suburb'>Tampa</h1>
+                        <div class='card-icons'>
+                            <p><img class="card-icon" src="{% static 'img/bed.png' %}" alt="Fang Realtors Logo" />{{ listing.beds }} bed
+                            <p>
+                            <p><img class="card-icon" src="{% static 'img/bathtub.png' %}" alt="Fang Realtors Logo" />{{ listing.baths }} bath
+                            <p>
+
+                        </div>
+                        <p>{{ listing.description|slice:":300" }}... </p>
+                        <a class='listing-button' href="{% url 'homepage-listingtemplate' listing.title %}">View Listing</a>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        {% endfor %}
+
+    </div>
+
+</section>

@@ -1,0 +1,100 @@
+/* BEGIN EXTERNAL SOURCE */
+section {
+background: linear-gradient( to right, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.4) ), url('../static/img/{{ property_listing.title }}.png');
+} background-size:cover
+/* END EXTERNAL SOURCE */
+/* BEGIN EXTERNAL SOURCE */
+p {
+align-text:center!important; margin-bottom:100px; font-size:16pt;
+}
+/* END EXTERNAL SOURCE */
+/* BEGIN EXTERNAL SOURCE */
+span {
+margin:100px 0px;display:block; height:10px;
+}
+/* END EXTERNAL SOURCE */
+/* BEGIN EXTERNAL SOURCE */
+div {
+position:relative;
+}
+/* END EXTERNAL SOURCE */
+/* BEGIN EXTERNAL SOURCE */
+div {
+width:74%
+}
+/* END EXTERNAL SOURCE */
+/* BEGIN EXTERNAL SOURCE */
+h2 {
+margin-bottom:0px
+}
+/* END EXTERNAL SOURCE */
+/* BEGIN EXTERNAL SOURCE */
+h2 {
+font-size:20pt;
+}
+/* END EXTERNAL SOURCE */
+/* BEGIN EXTERNAL SOURCE */
+h2 {
+color:white; margin-bottom:50px;font-size:16pt;
+}
+/* END EXTERNAL SOURCE */
+/* BEGIN EXTERNAL SOURCE */
+span {
+
+                width: 1px;
+                margin-top: -120px;
+                height: 120%;
+                pointer-events: none;
+                background-color: hsla(0,0%,100%,.25);
+                /* float:left; */
+                /* width: 2px; */
+                display: inline;
+                position: absolute;
+            
+}
+/* END EXTERNAL SOURCE */
+/* BEGIN EXTERNAL SOURCE */
+div {
+width:24%; ; display:inline !important; 
+}
+/* END EXTERNAL SOURCE */
+/* BEGIN EXTERNAL SOURCE */
+p {
+align-items:center; display:flex; margin-left:42%;margin-bottom:40px;font-size:12pt;
+}
+/* END EXTERNAL SOURCE */
+/* BEGIN EXTERNAL SOURCE */
+img {
+width:50px;margin-right:10px
+}
+/* END EXTERNAL SOURCE */
+/* BEGIN EXTERNAL SOURCE */
+p {
+align-items:center; display:flex; margin-left:42%;margin-bottom:40px;font-size:12pt;
+}
+/* END EXTERNAL SOURCE */
+/* BEGIN EXTERNAL SOURCE */
+img {
+width:50px;margin-right:10px
+}
+/* END EXTERNAL SOURCE */
+/* BEGIN EXTERNAL SOURCE */
+p {
+align-items:center; display:flex; margin-left:42%;margin-bottom:40px;font-size:12pt;
+}
+/* END EXTERNAL SOURCE */
+/* BEGIN EXTERNAL SOURCE */
+img {
+width:50px;margin-right:10px
+}
+/* END EXTERNAL SOURCE */
+/* BEGIN EXTERNAL SOURCE */
+p {
+align-items:center; display:flex; margin-left:40%;margin-bottom:40px;font-size:12pt;
+}
+/* END EXTERNAL SOURCE */
+/* BEGIN EXTERNAL SOURCE */
+img {
+width:55px;margin-right:10px
+}
+/* END EXTERNAL SOURCE */

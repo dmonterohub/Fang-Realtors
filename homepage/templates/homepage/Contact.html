@@ -1,0 +1,123 @@
+{% load static %}
+
+<body>
+    <!-- Hero Section-->
+    <section id="hero" class="featuredhero">
+        <div class="container">
+            <!-- Navigation -->
+            {% include "homepage\header.html" %}
+            <!-- Navigation End -->
+            <!-- Hero Box -->
+            <!-- Hero Box End-->
+        </div>
+    </section>
+
+
+    <!-- CTA Contact -->
+
+    <section id="cta" style="padding-bottom:40px;">
+
+        <div class="row" id="ctapage">
+            <!-- Col1 -->
+            <div class="column" id="textcolright">
+                <h3>Speak To An Agent Today</h3>
+                <h2>CONTACT US</h2>
+
+                <p style="font-size:16px;">
+                    In our process of cultivating the perfect home, Fang Realty<br>plays a vital
+                    role. We believe a house should be a home<br>and we approach every interaction with that mindset.
+                </p>
+                <a href="https://maps.app.goo.gl/8E8qeqn7F7V3bk2fA" target='_blank'>
+                    <div class='info-cntnr'>
+                        <p class='contact-info'>
+                            <img src="{% static 'img/pin.png' %}" alt="Location" class='contact-img'>12345 USF
+                            Place, Tampa, FL
+                        </p>
+                    </div>
+                </a>
+                <a href="tel:8135555555">
+                    <div class='info-cntnr'>
+                        <p class='contact-info'>
+                            <img src="{% static 'img/call.png' %}" alt="Phone number" class='contact-img'>1 (813)
+                            555-FANG
+                        </p>
+                    </div>
+                </a>
+                <a href="mailto:Fanginator@fangrealtors.com" target='_blank'>
+                    <div class='info-cntnr'>
+                        <p class='contact-info'>
+                            <img src="{% static 'img/email.png' %}" alt="Email" class='contact-img'>Fanginator@fangrealtors.com
+                        </p>
+                    </div>
+                </a>
+            </div>
+
+            <!-- Col2 -->
+            <div class="column" id="centered">
+                <div class='form-cntnr'>
+                    <form method="post" action="{% url 'homepage-contacts' %}">
+                        {% csrf_token %}
+                        <fieldset>
+                            <legend>
+                                Let's Talk<span class='centered'>
+                                    <hr class='gradient'>
+                                </span>
+                            </legend>
+                            <table>
+                                <tr>
+                                    <td><input type="text" name="first name" placeholder="First Name" /></td>
+                                    <td><input type="text" name="last name" placeholder="Last Name" /></td>
+                                </tr>
+                                <tr>
+                                    <td><input type="text" name="email" placeholder="Email" /></td>
+                                    <td><input type="text" name="phone" placeholder="Phone" /></td>
+                                </tr>
+                                <tr>
+                                    <td colspan="2">
+                                        <br><textarea rows="3" name="description"
+                                            placeholder="Type your message here"></textarea>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td colspan="2" class="banner">
+                                        <span class='centered'>
+                                            <input type="submit" value="Submit" class='cta-btn' /><input type="reset"
+                                                value="Clear Form" class='cta-btn' />
+                                        </span>
+                                    </td>
+                                </tr>
+                            </table>
+
+                        </fieldset>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+
+    <!-- Site footer -->
+    <section>
+
+        <footer>
+            <div class="footer">
+
+                <div class="footrow">
+                    <ul>
+                        <li><a href="{% url 'homepage-contacts' %}">Contact Us</a></li>
+                        <li><a href="{% url 'homepage-home' %}">Home</a></li>
+                        <li><a href="{% url 'homepage-featuredlistings' %}">Featured Listings</a></li>
+                        <li><a href="{% url 'homepage-alllistings' %}">All Listings</a></li>
+                        <li><a href="{% url 'homepage-searchlistings' %}">Search Listings</a></li>
+                    </ul>
+                </div>
+
+                <div class="footrow">
+                    Fang Realty Copyright 2024 Realty - All rights reserved
+                </div>
+            </div>
+        </footer>
+    </section>
+
+</body>
