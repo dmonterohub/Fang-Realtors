@@ -26,14 +26,14 @@ def home(request):
 def alllistings(request):
     contactform(request)
     listings = Listings.objects.all()
-    return render(request, 'homepage\All-Listings.html', {'listings': listings})
+    return render(request, 'homepage/All-Listings.html', {'listings': listings})
 
 # Renders the 'Featured Listings' page
 def featuredlistings(request):
     contactform(request)
     listings = Listings.objects.all()
     flistings = Listings.objects.filter(featuredlistings__isnull=False)
-    return render(request, 'homepage\Featured-Listings.html', {'listings': listings, 'flistings': flistings})
+    return render(request, 'homepage/Featured-Listings.html', {'listings': listings, 'flistings': flistings})
 
 # Renders the 'Search Homes' page
 def searchlistings(request):
@@ -63,15 +63,15 @@ def searchlistings(request):
     }
 
     #return render(request, 'homepage\Search-Listings.html', {'listings': listings})
-    return render(request, 'homepage\Search-Listings.html', context)
+    return render(request, 'homepage/Search-Listings.html', context)
 
 # Renders the page for a unique listing when the listing is selected
 def listingtemplate(request, listing_title):
     contactform(request)
     property_listing = get_object_or_404(Listings, title=listing_title)
-    return render(request, 'homepage\listing-template.html', {'property_listing': property_listing})
+    return render(request, 'homepage/listing-template.html', {'property_listing': property_listing})
 
 #Renders the 'Contact' page
 def contacts(request):
     contactform(request)
-    return render(request, 'homepage\Contact.html')
+    return render(request, 'homepage/Contact.html')
