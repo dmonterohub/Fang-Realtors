@@ -78,8 +78,13 @@ WSGI_APPLICATION = 'backendDesign.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases
 
+clear_db_url = os.environment.get('CLEARDB_DATABASE_URL')
+
+if clear_db_url:
+    clear_db_url = clear_db_url.split('?')[0]
+
 DATABASES = {
-    'default': dj_database_url.config(default=os.environ.get('CLEARDB_DATABASE_URL'))
+    'default': dj_database_url.config(default=clear_db_url)
     # 'default': {
     #     'ENGINE': 'django.db.backends.mysql',
     #     'NAME': 'seniorproject',
