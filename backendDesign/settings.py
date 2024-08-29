@@ -78,7 +78,7 @@ WSGI_APPLICATION = 'backendDesign.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases
 
-clear_db_url = os.environment.get('CLEARDB_DATABASE_URL')
+clear_db_url = os.environ.get('CLEARDB_DATABASE_URL')
 
 if clear_db_url:
     clear_db_url = clear_db_url.split('?')[0]
