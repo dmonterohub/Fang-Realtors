@@ -84,15 +84,15 @@ if clear_db_url:
     clear_db_url = clear_db_url.split('?')[0]
 
 DATABASES = {
-    'default': dj_database_url.config(default=clear_db_url)
-    # 'default': {
-    #     'ENGINE': 'django.db.backends.mysql',
-    #     'NAME': 'seniorproject',
-    #     'USER': 'root',
-    #     'PASSWORD': 'admin',
-    #     'HOST': '127.0.0.1',
-    #     'PORT': '3306',
-    # }
+    # 'default': dj_database_url.config(default=clear_db_url)
+    'default': {
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'seniorproject',
+        'USER': 'root',
+        'PASSWORD': 'admin',
+        'HOST': '127.0.0.1',
+        'PORT': '3306',
+    }
 }
 
 

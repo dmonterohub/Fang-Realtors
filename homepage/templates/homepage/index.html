@@ -46,8 +46,8 @@
       </div>
       <span class="header-menu__line" style="
                 width: 1px;
-                margin-top: -120px;
-                height: 100%;
+                margin-top: -80px;
+                height: 80%;
                 pointer-events: none;
                 background-color: hsla(0,0%,100%,.25);
                 /* float:left; */
@@ -64,101 +64,12 @@
   <!-- Featured Listings Section -->
   <section id="featuredlistings">
     <div>
-      <h3 style="text-align:center">Our Favorite Properties</h3>
-      <h2 style="text-align:center">FEATURED LISTINGS</h2>
+      <h3 style="text-align:center">Find Properties</h3>
+      <h2 style="text-align:center">RECENT LISTINGS</h2>
     </div>
-    <div class="responsive-three-columns">
-      <div class="three-col-column">
-        <div class="property-card">
-          <img src="{% static 'img/hero-image.jpg' %}" class="image">
-          <div class='tag'>
-            <h2>Price by negotiation</h2>
-          </div>
-          <div class="overlay">
-            <div class="card-content">
-              <h1 class='property-name'>6 Rd</h1>
-              <h1 class='suburb'>Tampa</h1>
-              <div class='card-icons'>
-                <p><img class="card-icon" src="{% static 'img/bed.png' %}" alt="Fang Realtors Logo" />4 bed
-                <p>
-                <p><img class="card-icon" src="{% static 'img/bathtub.png' %}" alt="Fang Realtors Logo" />3 bath
-                <p>
-
-
-
-              </div>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec laoreet, ipsum nec rhoncus rutrum, urna
-                eros auctor dolor, nec tristique nulla odio quis purus. Fusce sit amet vehicula nulla. Aliquam semper
-                cursus libero, eget vestibulum magna convallis quis. Nunc consectetur erat ac orci porta, sed gravida
-                tellus tempor. Nulla elementum quis mi non cursus. </p>
-              <a class='listing-button' href="#">View Listing</a>
-
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="three-col-column">
-        <div class="property-card">
-          <img src="{% static 'img/hero-image-alt.jpg' %}" class="image">
-          <div class='tag'>
-            <h2>$750,225</h2>
-          </div>
-          <div class="overlay">
-            <div class="card-content">
-              <h1 class='property-name'>Olive Rosebush Rd</h1>
-              <h1 class='suburb'>Tampa</h1>
-              <div class='card-icons'>
-                <p><img class="card-icon" src="{% static 'img/bed.png' %}" alt="Fang Realtors Logo" />2 bed
-                <p>
-                <p><img class="card-icon" src="{% static 'img/bathtub.png' %}" alt="Fang Realtors Logo" />2 bath
-                <p>
-
-
-
-              </div>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec laoreet, ipsum nec rhoncus rutrum, urna
-                eros auctor dolor, nec tristique nulla odio quis purus. Fusce sit amet vehicula nulla. Aliquam semper
-                cursus libero, eget vestibulum magna convallis quis. Nunc consectetur erat ac orci porta, sed gravida
-                tellus tempor. Nulla elementum quis mi non cursus. </p>
-              <a class='listing-button' href="#">View Listing</a>
-
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="three-col-column">
-        <div class="property-card">
-          <img src="{% static 'img/Exterior1.png' %}" class="image">
-          <div class='tag'>
-            <h2>$600,000</h2>
-          </div>
-          <div class="overlay">
-            <div class="card-content">
-              <h1 class='property-name'>3rd Fang Parkway</h1>
-              <h1 class='suburb'>St. Pete</h1>
-              <div class='card-icons'>
-                <p><img class="card-icon" src="{% static 'img/bed.png' %}" alt="Fang Realtors Logo" />3 bed
-                <p>
-                <p><img class="card-icon" src="{% static 'img/bathtub.png' %}" alt="Fang Realtors Logo" />2.5 bath
-                <p>
-
-
-
-              </div>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec laoreet, ipsum nec rhoncus rutrum, urna
-                eros auctor dolor, nec tristique nulla odio quis purus. Fusce sit amet vehicula nulla. Aliquam semper
-                cursus libero, eget vestibulum magna convallis quis. Nunc consectetur erat ac orci porta, sed gravida
-                tellus tempor. Nulla elementum quis mi non cursus. </p>
-              <a class='listing-button' href="#">View Listing</a>
-
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
+    {% include "homepage/idxrecentlistings.html" %}
     <div class='one-col-center'>
-      <a href="#" id="centerbtn" class="cta-btn try">View All Featured Properties</a>
+      <a href="{% url 'homepage-alllistings' %}" id="centerbtn" class="cta-btn try">View All Properties</a>
     </div>
   </section>
 

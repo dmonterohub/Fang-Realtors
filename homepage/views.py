@@ -1,6 +1,8 @@
 from django.shortcuts import render, get_object_or_404
 from .models import Listings, Contact
 
+listings = Listings.objects.all()
+flistings = Listings.objects.filter(featuredlistings__isnull=False)
 # Create your views here.
 
 # Method to be called in each view to handle form requests
@@ -20,19 +22,18 @@ def contactform(request):
 # Renders the 'Home' page
 def home(request):
     contactform(request)
-    return render(request, 'homepage/index.html')
+    recent_listings = Listings.objects.all().order_by('-listingid')[:3]
+    recent_listings = reversed(recent_listings)
+    return render(request, 'homepage/index.html', {'recent_listings': recent_listings,})
 
 # Renders the 'For Sale' page
 def alllistings(request):
     contactform(request)
-    listings = Listings.objects.all()
     return render(request, 'homepage/All-Listings.html', {'listings': listings})
 
 # Renders the 'Featured Listings' page
 def featuredlistings(request):
     contactform(request)
-    listings = Listings.objects.all()
-    flistings = Listings.objects.filter(featuredlistings__isnull=False)
     return render(request, 'homepage/Featured-Listings.html', {'listings': listings, 'flistings': flistings})
 
 # Renders the 'Search Homes' page
