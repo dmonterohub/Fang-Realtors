@@ -1,9 +1,9 @@
 from django.shortcuts import render, get_object_or_404
 from .models import Listings, Contact
 
+# Create your views here.
 listings = Listings.objects.all()
 flistings = Listings.objects.filter(featuredlistings__isnull=False)
-# Create your views here.
 
 # Method to be called in each view to handle form requests
 def contactform(request):
