@@ -2,6 +2,7 @@ asgiref==3.7.2
 certifi==2024.2.2
 distlib==0.3.8
 dj-database-url==2.2.0
+python-decouple==3.8
 Django==5.0.2
 filelock==3.13.1
 gunicorn==23.0.0

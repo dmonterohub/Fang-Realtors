@@ -161,29 +161,29 @@ class Features(models.Model):
         db_table = 'features'
 
 
-class HomepageFanglistings(models.Model):
-    id = models.BigAutoField(primary_key=True)
-    agent_id = models.IntegerField()
-    mls_number = models.CharField(max_length=200)
-    title = models.CharField(max_length=200)
-    description = models.CharField(max_length=200)
-    location_id = models.IntegerField()
-    price = models.CharField(max_length=200)
-    sold_status = models.CharField(max_length=200)
-    market_date = models.CharField(max_length=200)
-    year_built = models.CharField(max_length=200)
-    last_updated = models.CharField(max_length=200)
-    property_type_id = models.IntegerField()
-    home_size = models.IntegerField()
-    lot_size = models.FloatField()
-    beds = models.IntegerField()
-    baths = models.FloatField()
-    feature_id = models.IntegerField()
-    dist_id = models.IntegerField()
+# class HomepageFanglistings(models.Model):
+#     id = models.BigAutoField(primary_key=True)
+#     agent_id = models.IntegerField()
+#     mls_number = models.CharField(max_length=200)
+#     title = models.CharField(max_length=200)
+#     description = models.CharField(max_length=200)
+#     location_id = models.IntegerField()
+#     price = models.CharField(max_length=200)
+#     sold_status = models.CharField(max_length=200)
+#     market_date = models.CharField(max_length=200)
+#     year_built = models.CharField(max_length=200)
+#     last_updated = models.CharField(max_length=200)
+#     property_type_id = models.IntegerField()
+#     home_size = models.IntegerField()
+#     lot_size = models.FloatField()
+#     beds = models.IntegerField()
+#     baths = models.FloatField()
+#     feature_id = models.IntegerField()
+#     dist_id = models.IntegerField()
 
-    class Meta:
-        managed = False
-        db_table = 'homepage_fanglistings'
+#     class Meta:
+#         managed = False
+#         db_table = 'homepage_fanglistings'
 
 
 class Image(models.Model):
@@ -237,6 +237,10 @@ class Listings(models.Model):
 class ListingImage(models.Model):
     listingid = models.ForeignKey(Listings, on_delete=models.CASCADE)
     image = models.ImageField(upload_to='C:/projects/senior project/backendDesign/homepage/static/img')
+
+    class Meta:
+        managed = False
+        db_table = 'listingimage'
 
 
 class Location(models.Model):
