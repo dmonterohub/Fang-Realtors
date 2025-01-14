@@ -18,27 +18,68 @@ This Mock Realtor Website simulates the functionalities of a real estate platfor
 
 ### Installing
 
-* How/where to download your program
-* Any modifications needed to be made to files/folders
+1. Clone the repository:
+```
+git clone https://github.com/dmonterohub/Fang-Realtors.git
+```
+2. Navigate to the project directory:
+```
+cd Fang-Realtors
+```
+3. Create a virtual environment and activate it:
+```
+python -m venv venv
+source venv/bin/activate  # On Windows: venv\Scripts\activate
+```
+5. Install dependencies:
+```
+pip install -r requirements.txt
+```
+6. Configure your database connection in settings.py:
+```
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'your_database_name',
+        'USER': 'your_database_user',
+        'PASSWORD': 'your_database_password',
+        'HOST': 'localhost',
+        'PORT': '3306',
+    }
+}
+```
+7. Run database migrations:
+```
+python manage.py migrate
+```
 
 ### Executing program
 
-* How to run the program
-* Step-by-step bullets
+1. Start the development server:
 ```
-code blocks for commands
+python manage.py runserver
+```
+2. Open your browser and visit:
+```
+http://127.0.0.1:8000
 ```
 
 ## Help
+If you encounter issues, consider the following:
+* Ensure all dependencies are installed correctly.
+* Verify your database credentials in settings.py.
+* Check for any missing migrations with:
+```
+python manage.py makemigrations
+```
 
-Any advice for common problems or issues.
-```
-command to run if program contains helper info
-```
+For further assistance, open an issue in this repository.
 
 ## Authors
 
-Daniel Montero | dmontero0110@outlook.com
+Myself:
+* Daniel Montero | dmontero0110@outlook.com
+
 My Teammates:
 * Vincent Stankard
 * Nicholas Prawl
