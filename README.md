@@ -4,14 +4,17 @@ Fang Realtors is a dynamic, full-stack web application developed by myself and t
 
 ## Description
 
-An in-depth paragraph about your project and overview of use.
+This Mock Realtor Website simulates the functionalities of a real estate platform, offering users the ability to browse and search for properties using advanced filters. Built using Python and Django, the application integrates frontend, backend, and database components to provide a comprehensive demonstration of real-world development skills. It showcases my ability to learn and apply new technologies, troubleshoot deployment issues, deliver a fully functional web application, and collaborate effectively with a team to achieve project goals.
 
 ## Getting Started
 
 ### Dependencies
 
-* Describe any prerequisites, libraries, OS version, etc., needed before installing program.
-* ex. Windows 10
+* Python 3.9+
+* Django 3.2+
+* MySQL 8.0+
+* Operating System: Windows 10 or equivalent
+* Libraries listed in requirements.txt
 
 ### Installing
 
@@ -36,6 +39,10 @@ command to run if program contains helper info
 ## Authors
 
 Daniel Montero | dmontero0110@outlook.com
+My Teammates:
+* Vincent Stankard
+* Nicholas Prawl
+* Randall MacDonald
 
 ## Version History
 
@@ -47,7 +54,7 @@ Daniel Montero | dmontero0110@outlook.com
 
 ## License
 
-This project is licensed under the [NAME HERE] License - see the LICENSE.md file for details
+This project is intended for educational purposes only. The code is provided as-is to showcase my development skills and is not licensed for commercial use or redistribution.
 
 ## Acknowledgments
 
