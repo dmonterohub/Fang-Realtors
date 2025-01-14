@@ -99,9 +99,7 @@ This project is intended for educational purposes only. The code is provided as-
 
 ## Acknowledgments
 
-Inspiration, code snippets, etc.
-* [awesome-readme](https://github.com/matiassingers/awesome-readme)
-* [PurpleBooth](https://gist.github.com/PurpleBooth/109311bb0361f32d87a2)
-* [dbader](https://github.com/dbader/readme-template)
-* [zenorocha](https://gist.github.com/zenorocha/4526327)
-* [fvcproductions](https://gist.github.com/fvcproductions/1bfc2d4aecb01a834b46)
+* Special "Thank You!!" to my teammates Vincent, Nicholas, and Randall for their amazing collaboration and effort!
+* Our professor, Dr. Fang, for mine and my teammates inspiration for the website name.
+* Resources like the [Python Django Tutorial](https://www.youtube.com/watch?v=UmljXZIypDc&list=PL-osiE80TeTtoQCKZ03TU5fNfx2UY6U4p) from [Corey Schafer](https://www.youtube.com/@coreyms) on YouTube were invaluable to me as a total beginner to Django.
+* Other resources like Stack Overflow and Django documentation also helped me later during development.
